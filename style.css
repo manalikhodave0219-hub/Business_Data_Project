@@ -349,21 +349,31 @@ footer p {
     display: block;
     border-radius: 10px;
 }
+
+.technology-container {
+    display: grid !important;
+    grid-template-columns: repeat(20, 1fr) !important;
+    gap: 15px;
+    max-width: 1000px;
+    margin: 30px auto;
+}
+
 .technology-container span {
-    display: block;
-    width: 100%;
+    grid-column: span 5;
+    display: block !important;
+    padding: 18px 10px !important;
+    background: #ffffff !important;
+    border: 2px solid #d5e1ed !important;
+    border-radius: 10px !important;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.10) !important;
     text-align: center;
-    padding: 18px 10px;
     box-sizing: border-box;
-
-    background-color: #ffffff;
-    border: 1px solid #e0e6ed;
-    border-radius: 10px;
-    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.05);
-
-    font-weight: 600;
     color: #334e68;
-    transition: 0.3s;
+    font-weight: 600;
+}
+
+.technology-container span:nth-child(n+5) {
+    grid-column: span 4;
 }
 
 .technology-container span:hover {
