@@ -349,3 +349,18 @@ footer p {
     display: block;
     border-radius: 10px;
 }
+.technology-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    max-width: 1000px;
+    margin: 30px auto;
+    justify-items: center;
+}
+
+.technology-container span {
+    width: 100%;
+    text-align: center;
+    padding: 18px 10px;
+    box-sizing: border-box;
+}
