@@ -1,0 +1,345 @@
+/* General Settings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f5f7fc;
+    color: #172554;
+    line-height: 1.7;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* Navigation Bar */
+header {
+    background: #111c3a;
+    padding: 18px 7%;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.logo {
+    color: white;
+    font-size: 23px;
+    font-weight: bold;
+}
+
+.logo span {
+    color: #38d6c5;
+}
+
+.navbar ul {
+    display: flex;
+    gap: 22px;
+    list-style: none;
+    flex-wrap: wrap;
+}
+
+.navbar ul a {
+    color: #ffffff;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.navbar ul a:hover {
+    color: #38d6c5;
+}
+
+/* Home Section */
+.hero {
+    min-height: 500px;
+    display: flex;
+    align-items: center;
+    padding: 80px 10%;
+    color: white;
+    background: linear-gradient(120deg, #111c3a, #174d79);
+}
+
+.hero-content {
+    max-width: 750px;
+}
+
+.tagline,
+.small-title {
+    color: #089eaa;
+    font-weight: bold;
+    letter-spacing: 2px;
+    font-size: 12px;
+    margin-bottom: 12px;
+}
+
+.hero .tagline {
+    color: #38d6c5;
+}
+
+.hero h1 {
+    font-size: clamp(38px, 6vw, 62px);
+    line-height: 1.2;
+    margin-bottom: 22px;
+}
+
+.hero h1 span {
+    color: #38d6c5;
+}
+
+.hero-text {
+    max-width: 600px;
+    color: #e1e9f8;
+    font-size: 17px;
+    margin-bottom: 30px;
+}
+
+.btn {
+    display: inline-block;
+    background: #38d6c5;
+    color: #111c3a;
+    padding: 13px 25px;
+    border-radius: 7px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: white;
+    transform: translateY(-2px);
+}
+
+/* Common Sections */
+.section {
+    padding: 75px 8%;
+}
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.section-heading h2 {
+    font-size: clamp(27px, 4vw, 36px);
+    color: #111c3a;
+    margin-bottom: 12px;
+}
+
+.section-description {
+    color: #64748b;
+}
+
+/* About */
+.about-card {
+    max-width: 900px;
+    margin: auto;
+    padding: 30px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 5px 25px rgba(17, 28, 58, 0.07);
+    color: #526078;
+}
+
+.about-card p + p {
+    margin-top: 15px;
+}
+
+/* Dashboard */
+.dashboard-section {
+    background: #eaf0f9;
+}
+
+.image-card,
+.eda-card {
+    background: white;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 5px 25px rgba(17, 28, 58, 0.07);
+    min-width: 0;
+}
+
+.image-placeholder {
+    min-height: 220px;
+    border: 2px dashed #b8c8df;
+    border-radius: 9px;
+    background: #f8faff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 25px;
+    color: #64748b;
+}
+
+.image-placeholder h3 {
+    color: #174d79;
+    margin-bottom: 10px;
+}
+
+.note {
+    text-align: center;
+    color: #64748b;
+    font-size: 13px;
+    margin-top: 18px;
+}
+
+/* EDA Cards */
+.eda-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 25px;
+}
+
+.eda-card:last-child {
+    grid-column: 1 / -1;
+}
+
+/* Insights */
+.insights-section {
+    background: #eaf0f9;
+}
+
+.insights-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 22px;
+}
+
+.insight-card {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    border-top: 4px solid #16b8b0;
+    box-shadow: 0 5px 20px rgba(17, 28, 58, 0.05);
+}
+
+.insight-card h3 {
+    color: #174d79;
+    margin-bottom: 12px;
+}
+
+.insight-card p {
+    color: #64748b;
+    font-size: 14px;
+}
+
+/* Technologies */
+.technology-list {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.technology-list span {
+    background: white;
+    border: 1px solid #d9e3f0;
+    padding: 12px 20px;
+    border-radius: 8px;
+    color: #174d79;
+    font-weight: bold;
+}
+
+/* Footer */
+footer {
+    background: #111c3a;
+    color: white;
+    text-align: center;
+    padding: 35px 20px;
+}
+
+footer h3 {
+    margin-bottom: 8px;
+}
+
+footer p {
+    color: #d5deef;
+    font-size: 14px;
+}
+
+.copyright {
+    margin-top: 18px;
+    font-size: 12px;
+}
+
+/* Mobile Responsive Design */
+@media (max-width: 750px) {
+    header {
+        padding: 18px 5%;
+    }
+
+    .navbar {
+        flex-direction: column;
+    }
+
+    .navbar ul {
+        justify-content: center;
+        gap: 14px;
+    }
+
+    .hero {
+        padding: 70px 7%;
+        min-height: 400px;
+    }
+
+    .section {
+        padding: 55px 5%;
+    }
+
+    .eda-grid,
+    .insights-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .eda-card:last-child {
+        grid-column: auto;
+    }
+}
+/* Python EDA Screenshot Design */
+
+.eda-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 25px;
+    align-items: start;
+}
+
+.eda-card {
+    width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+    background: white;
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+.eda-card img {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    display: block;
+    object-fit: contain;
+    border-radius: 8px;
+}
+
+@media (max-width: 600px) {
+    .eda-grid {
+        grid-template-columns: 1fr;
+    }
+}
