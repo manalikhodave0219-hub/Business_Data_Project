@@ -351,7 +351,7 @@ footer p {
 }
 .technology-container {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(20, 1fr);
     gap: 15px;
     max-width: 1000px;
     margin: 30px auto;
@@ -359,8 +359,13 @@ footer p {
 }
 
 .technology-container span {
+    grid-column: span 5;
     width: 100%;
     text-align: center;
     padding: 18px 10px;
     box-sizing: border-box;
+}
+
+.technology-container span:nth-child(n+5) {
+    grid-column: span 4;
 }
