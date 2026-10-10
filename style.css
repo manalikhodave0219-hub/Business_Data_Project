@@ -349,23 +349,25 @@ footer p {
     display: block;
     border-radius: 10px;
 }
-.technology-container {
-    display: grid;
-    grid-template-columns: repeat(20, 1fr);
-    gap: 15px;
-    max-width: 1000px;
-    margin: 30px auto;
-    justify-items: center;
-}
-
 .technology-container span {
-    grid-column: span 5;
+    display: block;
     width: 100%;
     text-align: center;
     padding: 18px 10px;
     box-sizing: border-box;
+
+    background-color: #ffffff;
+    border: 1px solid #e0e6ed;
+    border-radius: 10px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.05);
+
+    font-weight: 600;
+    color: #334e68;
+    transition: 0.3s;
 }
 
-.technology-container span:nth-child(n+5) {
-    grid-column: span 4;
+.technology-container span:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    border-color: #38b2ac;
 }
