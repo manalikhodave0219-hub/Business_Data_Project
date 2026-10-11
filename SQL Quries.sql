@@ -1,7 +1,6 @@
--- जुने टेबल असल्यास डिलीट करण्यासाठी
+
 DROP TABLE IF EXISTS business_data;
 
--- नवीन टेबल तयार करण्यासाठी
 CREATE TABLE business_data (
     business_id TEXT,
     business_name TEXT,
