@@ -2,9 +2,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
 
-# --------------------------------------------------
 # 1. Load Excel Dataset
-# --------------------------------------------------
 
 file_path = "Business_Data.xlsx"
 
@@ -20,36 +18,25 @@ print("\n========== DATASET LOADED ==========")
 print("Rows:", df.shape[0])
 print("Columns:", df.shape[1])
 
-
-# --------------------------------------------------
 # 2. Display First 5 Records
-# --------------------------------------------------
 
 print("\n========== FIRST 5 RECORDS ==========")
 print(df.head())
 
 
-# --------------------------------------------------
 # 3. Dataset Information
-# --------------------------------------------------
 
 print("\n========== DATASET INFORMATION ==========")
 print(df.info())
 
-
-# --------------------------------------------------
 # 4. Column Names
-# --------------------------------------------------
 
 print("\n========== COLUMN NAMES ==========")
 
 for column in df.columns:
     print(column)
 
-
-# --------------------------------------------------
 # 5. Missing Values
-# --------------------------------------------------
 
 print("\n========== MISSING VALUES ==========")
 
@@ -57,10 +44,7 @@ missing_values = df.isnull().sum()
 
 print(missing_values)
 
-
-# --------------------------------------------------
 # 6. Duplicate Records
-# --------------------------------------------------
 
 print("\n========== DUPLICATE RECORDS ==========")
 
@@ -68,10 +52,7 @@ duplicates = df.duplicated().sum()
 
 print("Duplicate records:", duplicates)
 
-
-# --------------------------------------------------
 # 7. City-wise Business Count
-# --------------------------------------------------
 
 print("\n========== CITY-WISE BUSINESS COUNT ==========")
 
@@ -94,10 +75,7 @@ plt.xticks(rotation=0)
 plt.tight_layout()
 plt.show()
 
-
-# --------------------------------------------------
 # 8. Industry-wise Business Count
-# --------------------------------------------------
 
 print("\n========== INDUSTRY-WISE BUSINESS COUNT ==========")
 
@@ -118,10 +96,7 @@ plt.xticks(rotation=45)
 plt.tight_layout()
 plt.show()
 
-
-# --------------------------------------------------
 # 9. Business Type Analysis
-# --------------------------------------------------
 
 print("\n========== BUSINESS TYPE ==========")
 
@@ -142,10 +117,7 @@ plt.xticks(rotation=45)
 plt.tight_layout()
 plt.show()
 
-
-# --------------------------------------------------
 # 10. Online Presence Analysis
-# --------------------------------------------------
 
 print("\n========== ONLINE PRESENCE ==========")
 
@@ -165,10 +137,7 @@ plt.ylabel("Number of Businesses")
 plt.tight_layout()
 plt.show()
 
-
-# --------------------------------------------------
 # 11. Google Rating Analysis
-# --------------------------------------------------
 
 print("\n========== GOOGLE RATING ==========")
 
@@ -193,17 +162,13 @@ plt.ylabel("Number of Businesses")
 plt.tight_layout()
 plt.show()
 
-
-# --------------------------------------------------
 # 12. Website Availability
-# --------------------------------------------------
 
 print("\n========== WEBSITE AVAILABILITY ==========")
 
 website_count = df["Website"].value_counts()
 
 print(website_count)
-
 
 # Create Website Status
 
@@ -229,10 +194,7 @@ plt.ylabel("Number of Businesses")
 plt.tight_layout()
 plt.show()
 
-
-# --------------------------------------------------
 # 13. Problem Category Analysis
-# --------------------------------------------------
 
 print("\n========== PROBLEM CATEGORY ==========")
 
@@ -254,10 +216,7 @@ plt.xticks(rotation=45)
 plt.tight_layout()
 plt.show()
 
-
-# --------------------------------------------------
 # 14. Required Service Analysis
-# --------------------------------------------------
 
 print("\n========== REQUIRED SERVICES ==========")
 
@@ -265,10 +224,7 @@ required_service = df["Required Service"].value_counts()
 
 print(required_service.head(10))
 
-
-# --------------------------------------------------
 # 15. Requirement Status
-# --------------------------------------------------
 
 print("\n========== REQUIREMENT STATUS ==========")
 
@@ -290,10 +246,7 @@ plt.xticks(rotation=45)
 plt.tight_layout()
 plt.show()
 
-
-# --------------------------------------------------
 # 16. Urgency Analysis
-# --------------------------------------------------
 
 print("\n========== URGENCY ==========")
 
@@ -313,10 +266,7 @@ plt.ylabel("Number of Businesses")
 plt.tight_layout()
 plt.show()
 
-
-# --------------------------------------------------
 # 17. Budget Status
-# --------------------------------------------------
 
 print("\n========== BUDGET STATUS ==========")
 
@@ -324,10 +274,7 @@ budget = df["Budget Status"].value_counts()
 
 print(budget)
 
-
-# --------------------------------------------------
 # 18. Follow-Up Status
-# --------------------------------------------------
 
 print("\n========== FOLLOW-UP STATUS ==========")
 
@@ -335,20 +282,14 @@ follow_up = df["Follow-Up Status"].value_counts()
 
 print(follow_up)
 
-
-# --------------------------------------------------
 # 19. Statistical Summary
-# --------------------------------------------------
 
 print("\n========== STATISTICAL SUMMARY ==========")
 
 print("\nGoogle Rating Statistical Summary:")
 print(df["Google Rating"].describe())
 
-
-# --------------------------------------------------
 # 20. Final EDA Summary
-# --------------------------------------------------
 
 print("\n========================================")
 print("        EDA COMPLETED SUCCESSFULLY")
